@@ -1,0 +1,402 @@
+@font-face {
+  font-family: "Stavok";
+  src: url("fonts/stavok.ttf") format("truetype"),
+    url("fonts/stavok.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Calgary";
+  src: url("fonts/Calgary.ttf") format("truetype"),
+    url("fonts/Calgary.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  background-color: #131747;
+  height: 100%;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Stavok";
+}
+
+.main-container {
+  max-width: 414px;
+  margin: 0 auto;
+  background: linear-gradient(169.45deg, #131747 13.82%, #000000 97.34%);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+img.bg {
+  position: absolute;
+}
+
+.header {
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+  margin-top: 28px;
+  padding: 0 20px;
+}
+
+.content .fitri {
+  margin-bottom: 32px;
+  width: 80%;
+  margin-top: 8px;
+}
+
+.content .name {
+  font-size: 14px;
+  font-family: "Stavok";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-bottom: 32px;
+  margin-top: 50px;
+}
+
+.content .name span span {
+  border-right: 0.05em solid;
+  animation: caret 1s steps(1) infinite;
+  padding: 0px;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.content .name span {
+  font-family: "Stavok";
+  text-transform: capitalize;
+  background: #8fa1d3;
+  padding: 8px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.content .line {
+  height: 2px;
+  width: 56px;
+  border-radius: 35px;
+  background: #fff;
+  margin: 18px auto;
+}
+
+.content .greeting {
+  font-size: 15px;
+  font-family: "Stavok";
+  line-height: 22px;
+  margin-top: 16px;
+}
+
+.content .greeting span {
+  font-size: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: -10px;
+  text-align: center;
+}
+
+.footer img {
+  width: 100%;
+  max-width: 414px;
+}
+
+.footer p {
+  position: absolute;
+  bottom: 45px;
+  color: #2a234d;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: -30;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: -30;
+    opacity: 1;
+  }
+}
+
+.popup {
+  position: absolute;
+  z-index: 99;
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+  max-width: 414px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup.hide {
+  display: none;
+}
+
+.popup .eid {
+  margin-top: 30px;
+  -webkit-animation-name: logo-fade;
+  animation-name: logo-fade;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.popup .brand {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popup input {
+  margin-top: 8rem;
+}
+
+.popup .help-text {
+  font-size: 10px;
+  color: #000000;
+  margin-top: 16px;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.2s;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+}
+
+.fadeIn2 {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #2a234d;
+  text-align: center;
+  color: #c4a2fc;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  color: #c4a2fc;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #c4a2fc;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  font-style: italic;
+  color: #2a234d;
+  font-weight: 400;
+}
+
+.form-control:-moz-placeholder {
+  font-style: italic;
+  color: #2a234d;
+  font-weight: 400;
+}
+
+.form-control::-moz-placeholder {
+  font-style: italic;
+  color: #2a234d;
+  font-weight: 400;
+}
+
+.logos {
+  margin-top: 24px;
+  /* margin-bottom: 12px; */
+  text-align: center;
+}
+
+@-webkit-keyframes logo-fade {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) rotate(-180deg) translateX(50px);
+    transform: scale3d(0.3, 0.3, 0.3) rotate(-180deg) translateX(50px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0);
+    -webkit-transform: rotate(0deg) translateX(0);
+  }
+}
+
+@keyframes logo-fade {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) rotate(-180deg) translateX(50px);
+    transform: scale3d(0.3, 0.3, 0.3) rotate(-180deg) translateX(50px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0);
+    -webkit-transform: rotate(0deg) translateX(0);
+  }
+}
+
+.logos img {
+  width: 60%;
+  margin-top: 20px;
+}
+
+.logo-btm img {
+  width: 90px;
+  margin-top: 8px;
+}
+
+.txt1 {
+  font-family: "Stavok";
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.txt2 {
+  font-family: "Calgary";
+  font-size: 55px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    position: fixed;
+    bottom: -10px;
+  }
+
+  @-webkit-keyframes slideIn {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+
+    to {
+      bottom: -90;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+
+    to {
+      bottom: -90;
+      opacity: 1;
+    }
+  }
+}
